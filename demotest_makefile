@@ -1,0 +1,22 @@
+CC = gcc 
+HEAD = yhrbtree.h
+MACRO = -Wall -g
+
+LSO = -lyhrbtree
+SO_PATH = . 
+
+all:  test_str test_struct test_2key
+
+# com object
+test_str: test_str.c 
+	$(CC) $(MACRO) -Wl,-rpath,$(SO_PATH) -L$(SO_PATH) $(LSO) $< -o $@
+
+test_struct: test_struct.c 
+	$(CC) $(MACRO) -Wl,-rpath,$(SO_PATH) -L$(SO_PATH) $(LSO) $< -o $@
+
+test_2key: test_2key.c
+	$(CC) $(MACRO) -Wl,-rpath,$(SO_PATH) -L$(SO_PATH) $(LSO) $< -o $@
+
+clean:
+	rm -rf test_str test_struct test_2key
+

@@ -1,0 +1,5 @@
+struct rb_node_data *rbtree_search(struct rb_root *root, const void* key);
+	参数key将作为第一个参数传入cmp函数 
+	root的每个节点getkey(node->data)作为cmp的第二个参数传入
+写cmp函数的时候，上述需要清楚，
+由此而言，写cmp函数时候可以使用一些小技巧，传入一些任意需要的类型为后续服务
