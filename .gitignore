@@ -1,4 +1,6 @@
 lib/
+include/
+export_rbtree/
 libyhrbtree.so
 test_2key
 test_str
